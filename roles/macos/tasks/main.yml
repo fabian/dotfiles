@@ -2,7 +2,7 @@
 - name: get current Terminal profile
   shell: defaults read com.apple.Terminal 'Default Window Settings'
   register: terminal_theme
-  always_run: yes
+  check_mode: no
   changed_when: false
 
 - name: download Terminal profile

@@ -9,7 +9,7 @@
 - name: check launchd
   shell: launchctl list
   register: launchd_result
-  always_run: yes
+  check_mode: no
   changed_when: false
 
 - name: load launchd links

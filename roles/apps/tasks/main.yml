@@ -24,7 +24,7 @@
   command: mas list
   when: not lookup("env", "CI")
   register: mas_result
-  always_run: yes
+  check_mode: no
   changed_when: false
 
 - name: install apps from app store
