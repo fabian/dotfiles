@@ -1,5 +1,9 @@
 # {{ ansible_managed }}
 
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+
 {% for host in ssh_hosts %}
 
 Host {{ host.nickname | default(host.hostname) }}
