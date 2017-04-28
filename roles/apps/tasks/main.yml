@@ -30,7 +30,7 @@
 - name: install apps from app store
   command: mas install {{ item }}
   ignore_errors: yes
-  when: not mas_result.skipped|default(false) and "{{ item }}" not in mas_result.stdout
+  when: not mas_result.skipped|default(false) and item|string not in mas_result.stdout
   with_items:
     - 506189836 # Harvest
     - 413965349 # Soulver
