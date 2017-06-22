@@ -2,6 +2,7 @@
 - name: unload MacOS Apache
   command: launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
   become: yes
+  changed_when: false
 
 - name: install taps
   homebrew_tap: tap={{ item }} state=present
