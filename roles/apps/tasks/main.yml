@@ -12,13 +12,25 @@
     - git
     - python
     - mas
-    - memcached
-    - mysql
     - node
-    - rabbitmq
     - rbenv
-    - redis
     - wget
+
+- name: install Memcached
+  homebrew: name=memcached state=present
+  notify: restart memcached
+
+- name: install MySQL
+  homebrew: name=mysql state=present
+  notify: restart mysql
+
+- name: install RabbitMQ
+  homebrew: name=rabbitmq state=present
+  notify: restart rabbitmq
+
+- name: install Redis
+  homebrew: name=redis state=present
+  notify: restart redis
 
 - name: get installed apps from app store
   command: mas list
