@@ -1,0 +1,48 @@
+---
+- name: unload MacOS Apache
+  command: launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+  become: yes
+
+- name: install taps
+  homebrew_tap: tap={{ item }} state=present
+  with_items:
+    - homebrew/apache
+
+- name: install Apache
+  homebrew: name=httpd24 state=present install_options=with-privileged-ports
+
+- name: create Apache configuration directory
+  file: path=/usr/local/etc/apache2/2.4/other state=directory recurse=yes
+  tags:
+     - configuration
+
+- name: enable other directory in Apache
+  lineinfile: dest=/usr/local/etc/apache2/2.4/httpd.conf line="Include /usr/local/etc/apache2/2.4/other/*" state=present
+  notify: restart apache
+  tags:
+     - configuration
+
+- name: configure Apache
+  template: src=templates/httpd.conf.j2 dest=/usr/local/etc/apache2/2.4/other/httpd.conf
+  notify: restart apache
+  tags:
+     - configuration
+
+- name: enable PHP in Apache
+  template: src=templates/php.conf.j2 dest=/usr/local/etc/apache2/2.4/other/php.conf
+  notify: restart apache
+  tags:
+     - configuration
+
+- name: configure Virtualhosts in Apache
+  template: src=templates/vhosts.conf.j2 dest=/usr/local/etc/apache2/2.4/other/vhosts.conf
+  notify: restart apache
+  tags:
+     - configuration
+
+- name: update /etc/hosts
+  lineinfile: dest=/etc/hosts regexp=".* {{ item.servername }}.*$" line="127.0.0.1 {{ item.servername }}{% if item.serveralias is defined %} {{ item.serveralias }}{% endif %}" state=present
+  with_items: '{{ virtualhosts }}'
+  become: yes
+  tags:
+     - configuration

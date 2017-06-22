@@ -16,37 +16,9 @@
     - composer
   notify: restart apache
 
-- name: configure Apache
-  template: src=templates/apache/httpd.conf.j2 dest=/etc/apache2/other/httpd.conf
-  become: yes
-  notify: restart apache
-  tags:
-     - configuration
-
-- name: enable PHP in Apache
-  template: src=templates/apache/php.conf.j2 dest=/etc/apache2/other/php.conf
-  become: yes
-  notify: restart apache
-  tags:
-     - configuration
-
-- name: configure Virtualhosts in Apache
-  template: src=templates/apache/vhosts.conf.j2 dest=/etc/apache2/other/vhosts.conf
-  become: yes
-  notify: restart apache
-  tags:
-     - configuration
-
 - name: configure PHP
-  template: src=templates/php/php.ini.j2 dest=/usr/local/etc/php/5.6/conf.d/php.ini
+  template: src=templates/php.ini.j2 dest=/usr/local/etc/php/5.6/conf.d/php.ini
   become: yes
   notify: restart apache
-  tags:
-     - configuration
-
-- name: update /etc/hosts
-  lineinfile: dest=/etc/hosts regexp=".* {{ item.servername }}.*$" line="127.0.0.1 {{ item.servername }}{% if item.serveralias is defined %} {{ item.serveralias }}{% endif %}" state=present
-  with_items: '{{ virtualhosts }}'
-  become: yes
   tags:
      - configuration

@@ -16,5 +16,5 @@ DocumentRoot /Users/{{ lookup('env', 'USER') }}/Workspace
     Require local
 </Directory>
 
-LoadModule rewrite_module libexec/apache2/mod_rewrite.so
-LoadModule expires_module libexec/apache2/mod_expires.so
+LoadModule rewrite_module libexec/mod_rewrite.so
+LoadModule expires_module libexec/mod_expires.so

@@ -1,4 +1,0 @@
----
-- name: restart apache
-  command: apachectl restart
-  become: yes
