@@ -65,6 +65,7 @@
     - 409183694 # Keynote
     - 409201541 # Pages
     - 409203825 # Numbers
+    - 904280696 # Things 3
 
 - name: install casks
   homebrew_cask: name={{ item }} state=present
@@ -99,7 +100,6 @@
     - sketch
     - skype
     - textmate
-    - things
     - tower
     - transmit
     - vagrant
