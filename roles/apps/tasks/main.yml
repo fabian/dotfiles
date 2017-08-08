@@ -66,6 +66,8 @@
     - 409201541 # Pages
     - 409203825 # Numbers
     - 904280696 # Things 3
+    - 424389933 # Final Cut Pro
+    - 434290957 # Motion
 
 - name: install casks
   homebrew_cask: name={{ item }} state=present
