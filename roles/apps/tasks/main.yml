@@ -68,6 +68,7 @@
     - 904280696 # Things 3
     - 424389933 # Final Cut Pro
     - 434290957 # Motion
+    - 409907375 # Apple Remote Desktop
 
 - name: install casks
   homebrew_cask: name={{ item }} state=present
