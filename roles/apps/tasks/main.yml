@@ -3,6 +3,7 @@
   homebrew_tap: tap={{ item }} state=present
   with_items:
     - caskroom/cask
+    - caskroom/fonts 
     - argon/mas
 
 - name: install brews
@@ -108,6 +109,11 @@
     - transmit
     - vagrant
     - vlc
+    - font-league-gothic
+    - font-raleway
+    - font-roboto
+    - font-roboto-condensed
+    - font-roboto-slab
 
 - name: install pip packages
   pip: name={{ item }} state=present
