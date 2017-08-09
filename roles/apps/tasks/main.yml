@@ -13,6 +13,7 @@
     - git
     - python
     - mas
+    - maven
     - node
     - rbenv
     - wget
