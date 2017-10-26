@@ -1,4 +1,4 @@
 ---
 - name: restart apache
-  command: brew services restart homebrew/apache/httpd24
+  command: brew services restart httpd
   become: yes
