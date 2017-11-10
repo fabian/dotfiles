@@ -23,6 +23,12 @@
   tags:
      - configuration
 
+- name: set Apache port
+  lineinfile: dest=/usr/local/etc/httpd/httpd.conf regexp="^Listen " line="Listen 80" state=present
+  notify: restart apache
+  tags:
+     - configuration
+
 - name: configure Apache
   template: src=templates/httpd.conf.j2 dest=/usr/local/etc/httpd/other/httpd.conf
   notify: restart apache
