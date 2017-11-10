@@ -7,7 +7,7 @@
     - homebrew/versions
 
 - name: install brews
-  homebrew: name={{ item }} state=present install_options={{ "with-apache" if not lookup("env", "CI") else "" }}
+  homebrew: name={{ item }} state=present install_options={{ "with-httpd" if not lookup("env", "CI") else "" }}
   ignore_errors: yes
   with_items:
     - php56
