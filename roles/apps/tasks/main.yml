@@ -46,76 +46,13 @@
   command: mas install {{ item }}
   ignore_errors: yes
   when: not mas_result.skipped|default(false) and item|string not in mas_result.stdout
-  with_items:
-    - 506189836 # Harvest
-    - 413965349 # Soulver
-    - 889428659 # xScope
-    - 803453959 # Slack
-    - 603117688 # CCMenu
-    - 969418666 # ColorSnapper2
-    - 443987910 # 1Password
-    - 775737590 # iA Writer
-    - 411643860 # DaisyDisk
-    - 497799835 # Xcode
-    - 546392952 # Prizmo
-    - 924726344 # Deliveries
-    - 975937182 # Fantastical 2
-    - 407963104 # Pixelmator
-    - 955848755 # Theine
-    - 406056744 # Evernote
-    - 512533449 # Slicy
-    - 409183694 # Keynote
-    - 409201541 # Pages
-    - 409203825 # Numbers
-    - 904280696 # Things 3
-    - 424389933 # Final Cut Pro
-    - 434290957 # Motion
-    - 409907375 # Apple Remote Desktop
-    - 425424353 # The Unarchiver
+  with_items: '{{ app_store_apps }}'
 
 - name: install casks
   homebrew_cask: name={{ item }} state=present
   when: not lookup("env", "CI")
   ignore_errors: yes
-  with_items:
-    - alfred
-    - appzapper
-    - arq
-    - atom
-    - charles
-    - dash
-    - docker
-    - eclipse-jee
-    - google-chrome
-    - google-backup-and-sync
-    - dropbox
-    - firefox
-    - java
-    - kaleidoscope
-    - libreoffice
-    - little-snitch
-    - paparazzi
-    - parallels-desktop
-    - paw
-    - poedit
-    - prince
-    - qlstephen
-    - qlmarkdown
-    - qlprettypatch
-    - quicklook-json
-    - quicklookase
-    - sequel-pro
-    - sketch
-    - skype
-    - tower
-    - transmit
-    - vagrant
-    - vlc
-    - font-league-gothic
-    - font-raleway
-    - font-roboto
-    - font-roboto-condensed
-    - font-roboto-slab
+  with_items: '{{ cask_apps }}'
 
 - name: install pip packages
   pip: name={{ item }} state=present
