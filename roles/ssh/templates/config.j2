@@ -11,4 +11,8 @@ Host {{ host.nickname | default(host.hostname) }}
     User {{ host.user | default(lookup('env', 'USER')) }}
     ForwardAgent {% if host.forward_agent | default(False) %}yes{% else %}no{% endif %}
 
+{% if host.key is defined %}
+    IdentityFile {{ host.key }}
+{% endif %}
+
 {% endfor %}
