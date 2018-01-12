@@ -10,7 +10,7 @@
     - homebrew/apache
 
 - name: install Apache
-  homebrew: name=httpd state=present install_options=with-privileged-ports
+  homebrew: name=httpd state=present
 
 - name: create Apache configuration directory
   file: path=/usr/local/etc/httpd/other state=directory recurse=yes
