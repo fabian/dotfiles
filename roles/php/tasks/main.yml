@@ -10,14 +10,14 @@
   homebrew: name={{ item }} state=present install_options={{ "with-httpd" if not lookup("env", "CI") else "" }}
   ignore_errors: yes
   with_items:
-    - php56
-    - php56-intl
-    - php56-xdebug
+    - php71
+    - php71-intl
+    - php71-xdebug
     - composer
   notify: restart apache
 
 - name: configure PHP
-  template: src=templates/php.ini.j2 dest=/usr/local/etc/php/5.6/conf.d/php.ini
+  template: src=templates/php.ini.j2 dest=/usr/local/etc/php/7.1/conf.d/php.ini
   become: yes
   notify: restart apache
   tags:
