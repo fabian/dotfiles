@@ -4,11 +4,6 @@
   become: yes
   changed_when: false
 
-- name: install taps
-  homebrew_tap: tap={{ item }} state=present
-  with_items:
-    - homebrew/apache
-
 - name: install Apache
   homebrew: name=httpd state=present
 
