@@ -3,8 +3,7 @@
   homebrew_tap: tap={{ item }} state=present
   with_items:
     - caskroom/cask
-    - caskroom/fonts 
-    - argon/mas
+    - caskroom/fonts
 
 - name: install brews
   homebrew: name={{ item }} state=present
