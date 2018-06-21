@@ -3,7 +3,7 @@
   command: brew services restart memcached
 
 - name: restart mysql
-  command: brew services restart mysql
+  command: brew services restart mysql@5.7
 
 - name: restart rabbitmq
   command: brew services restart rabbitmq

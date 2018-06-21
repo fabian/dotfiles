@@ -23,7 +23,7 @@
   notify: restart memcached
 
 - name: install MySQL
-  homebrew: name=mysql state=present
+  homebrew: name=mysql@5.7 state=present
   notify: restart mysql
 
 - name: install RabbitMQ
