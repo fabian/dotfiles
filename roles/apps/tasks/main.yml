@@ -60,6 +60,8 @@
     - mysqlclient
     - python-memcached
     - virtualenv
+  environment:
+    PATH: /usr/local/opt/mysql@5.7/bin:$PATH
 
 - name: install npm packages
   npm: name={{ item }} global=yes state=present
