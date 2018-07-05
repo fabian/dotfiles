@@ -61,7 +61,7 @@
     - python-memcached
     - virtualenv
   environment:
-    PATH: /usr/local/opt/mysql@5.7/bin:$PATH
+    PATH: "/usr/local/opt/mysql@5.7/bin:{{ ansible_env.PATH }}"
 
 - name: install npm packages
   npm: name={{ item }} global=yes state=present
