@@ -18,3 +18,4 @@ DocumentRoot /Users/{{ lookup('env', 'USER') }}/Workspace
 
 LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
 LoadModule expires_module lib/httpd/modules/mod_expires.so
+LoadModule negotiation_module lib/httpd/modules/mod_negotiation.so
