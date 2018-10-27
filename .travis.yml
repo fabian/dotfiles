@@ -8,8 +8,6 @@ cache:
 
 before_install:
   - brew update
-  - brew unlink python
-  - brew install ansible
 
 script:
   - ansible-playbook site.yml --syntax-check
