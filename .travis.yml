@@ -1,7 +1,5 @@
-language: ruby
 os: osx
-osx_image: xcode9
-rvm: system
+osx_image: xcode10
 
 cache:
   directories:
