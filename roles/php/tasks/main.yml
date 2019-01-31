@@ -3,9 +3,7 @@
   homebrew: name={{ item }} state=present install_options={{ "with-httpd" if not lookup("env", "CI") else "" }}
   ignore_errors: yes
   with_items:
-    - php71
-    - php71-intl
-    - php71-xdebug
+    - php@7.1
     - composer
   notify: restart apache
 
