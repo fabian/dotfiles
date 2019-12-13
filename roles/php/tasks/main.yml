@@ -3,12 +3,12 @@
   homebrew: name={{ item }} state=present install_options={{ "with-httpd" if not lookup("env", "CI") else "" }}
   ignore_errors: yes
   with_items:
-    - php@7.1
+    - php@7.2
     - composer
   notify: restart apache
 
 - name: configure PHP
-  template: src=templates/php.ini.j2 dest=/usr/local/etc/php/7.1/conf.d/php.ini
+  template: src=templates/php.ini.j2 dest=/usr/local/etc/php/7.2/conf.d/php.ini
   become: yes
   notify: restart apache
   tags:
