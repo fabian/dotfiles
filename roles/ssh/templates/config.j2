@@ -8,6 +8,7 @@ Host *
 
 Host {{ host.nickname | default(host.hostname) }}
     Hostname {{ host.hostname }}
+    Port {{ host.port | default(22) }}
     User {{ host.user | default(lookup('env', 'USER')) }}
     ForwardAgent {% if host.forward_agent | default(False) %}yes{% else %}no{% endif %}
 
