@@ -6,6 +6,9 @@ cache:
     - $HOME/Library/Caches/Homebrew
     - $HOME/.cache/pip
 
+before_install:
+  - brew update
+
 script:
   - ansible-playbook site.yml --syntax-check
   - ansible-playbook site.yml --diff
