@@ -15,6 +15,9 @@ jobs:
     - name: Update Homebrew
       run: brew update
 
+    - name: Install Ansible
+      run: brew install ansible
+
     - name: Lint Ansible Playbook
       run: ansible-playbook site.yml --syntax-check
 
