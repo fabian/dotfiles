@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Update Homebrew
+      run: brew update
+
+    - name: Lint Ansible Playbook
+      run: ansible-playbook site.yml --syntax-check
+
+    - name: Run Ansible Playbook
+      run: ansible-playbook site.yml --diff
