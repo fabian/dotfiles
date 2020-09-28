@@ -14,7 +14,7 @@ cask_apps:
   - atom
   - docker
   - google-chrome
-  - java
+  - adoptopenjdk8
 app_store_apps:
   - 497799835 # Xcode
   - 409183694 # Keynote

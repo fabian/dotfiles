@@ -4,6 +4,7 @@
   with_items:
     - homebrew/cask
     - homebrew/cask-fonts
+    - adoptopenjdk/openjdk
 
 - name: install brews
   homebrew: name={{ item }} state=present
