@@ -2,8 +2,8 @@
 - name: restart memcached
   command: brew services restart memcached
 
-- name: restart mysql
-  command: brew services restart mysql@5.7
+- name: restart mariadb
+  command: brew services restart mariadb@10.3
 
 - name: restart rabbitmq
   command: brew services restart rabbitmq

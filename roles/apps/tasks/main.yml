@@ -22,9 +22,9 @@
   homebrew: name=memcached state=present
   notify: restart memcached
 
-- name: install MySQL
-  homebrew: name=mysql@5.7 state=present
-  notify: restart mysql
+- name: install MariaDB
+  homebrew: name=mariadb@10.3 state=present
+  notify: restart mariadb
 
 - name: install RabbitMQ
   homebrew: name=rabbitmq state=present
