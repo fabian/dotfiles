@@ -21,7 +21,7 @@ jobs:
           ~/Library/Caches/Homebrew
           ~/.cache/pip
           ~/.npm
-        key: cache
+        key: cache-202012
 
     - name: Update Homebrew
       run: brew update
