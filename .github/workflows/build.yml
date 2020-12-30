@@ -26,6 +26,9 @@ jobs:
     - name: Update Homebrew
       run: brew update
 
+    - name: Remove Python 2
+      run: brew unlink python@2
+
     - name: Install Ansible
       run: brew install ansible
 
