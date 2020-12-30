@@ -23,6 +23,9 @@ jobs:
           ~/.npm
         key: cache-202012
 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
     - name: Update Homebrew
       run: brew update
 
