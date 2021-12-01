@@ -57,7 +57,6 @@
 - name: install pip packages
   pip: name={{ item }} extra_args=--user state=present
   with_items:
-    - ansible
     - mysqlclient
     - python-memcached
     - virtualenv
