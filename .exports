@@ -3,6 +3,9 @@
 
 export PATH="./node_modules/.bin:/usr/local/bin:/opt/local/bin:/usr/local/sbin:/opt/local/sbin:$PATH"
 
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Make nano the default editor.
