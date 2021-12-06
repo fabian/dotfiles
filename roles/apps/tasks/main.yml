@@ -9,6 +9,7 @@
   homebrew: name={{ item }} state=present
   ignore_errors: yes
   with_items:
+    - composer
     - git
     - openjdk@8
     - python
