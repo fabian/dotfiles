@@ -1,4 +1,0 @@
----
-- name: restart apache
-  command: brew services restart httpd
-  become: yes
