@@ -76,4 +76,4 @@
     - bundler
 
 - name: symlink JDK for system Java wrappers
-  file: src=/usr/local/opt/openjdk@8/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk-8.jdk state=link follow=false
+  file: src=/usr/local/opt/openjdk@8/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk-8.jdk state=link follow=no force=yes
