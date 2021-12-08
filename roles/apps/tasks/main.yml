@@ -20,6 +20,7 @@
     - rbenv
     - ruby
     - wget
+    - mysql-client@5.7
 
 - name: install Memcached
   homebrew: name=memcached state=present
