@@ -16,6 +16,7 @@
     - mas
     - maven
     - node
+    - svn
     - rbenv
     - ruby
     - wget
