@@ -58,7 +58,7 @@
   with_items: '{{ cask_apps }}'
 
 - name: install pip packages
-  pip: name={{ item }} extra_args=--user state=present
+  pip: name={{ item }} state=present
   with_items:
     - ansible
     - mysqlclient
