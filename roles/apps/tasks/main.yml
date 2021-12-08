@@ -11,7 +11,7 @@
   with_items:
     - composer
     - git
-    - openjdk@8
+    - openjdk
     - python
     - mas
     - maven
@@ -76,5 +76,6 @@
     - bundler
 
 - name: symlink JDK for system Java wrappers
-  file: src=/usr/local/opt/openjdk@8/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk-8.jdk state=link follow=no
+  file: src=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk.jdk state=link follow=no
   when: not lookup("env", "CI")
+  become: yes
