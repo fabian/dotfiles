@@ -5,8 +5,5 @@
 - name: restart mariadb
   command: brew services restart mariadb@10.3
 
-- name: restart rabbitmq
-  command: brew services restart rabbitmq
-
 - name: restart redis
   command: brew services restart redis
