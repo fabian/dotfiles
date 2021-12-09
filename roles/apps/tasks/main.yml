@@ -75,6 +75,7 @@
   with_items:
     - sass
     - bundler
+    - compass
 
 - name: symlink JDK for system Java wrappers
   file: src=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk.jdk state=link follow=no
