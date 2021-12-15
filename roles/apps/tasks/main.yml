@@ -4,6 +4,7 @@
   with_items:
     - homebrew/cask
     - homebrew/cask-fonts
+    - homebrew/cask-versions
 
 - name: install brews
   homebrew: name={{ item }} state=present
@@ -11,7 +12,6 @@
   with_items:
     - composer
     - git
-    - openjdk
     - python
     - mas
     - maven
@@ -21,6 +21,9 @@
     - ruby
     - wget
     - mysql-client@5.7
+
+- name: install Java
+  homebrew_cask: name=temurin8 state=present
 
 - name: install Memcached
   homebrew: name=memcached state=present
@@ -76,8 +79,3 @@
     - sass
     - bundler
     - compass
-
-- name: symlink JDK for system Java wrappers
-  file: src=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk dest=/Library/Java/JavaVirtualMachines/openjdk.jdk state=link follow=no
-  when: not lookup("env", "CI")
-  become: yes
