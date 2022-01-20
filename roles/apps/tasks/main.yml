@@ -63,6 +63,7 @@
     - mysqlclient
     - PyMySQL
     - python-memcached
+    - boto3
     - virtualenv
   environment:
     PATH: "/usr/local/opt/mariadb@10.3/bin:{{ ansible_env.PATH }}"
