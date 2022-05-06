@@ -19,6 +19,7 @@
     - svn
     - rbenv
     - ruby
+    - rustup
     - wget
     - mysql-client@5.7
 
