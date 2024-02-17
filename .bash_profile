@@ -59,3 +59,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Rust
 . "$HOME/.cargo/env"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
