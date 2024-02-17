@@ -12,7 +12,7 @@ done;
 unset file;
 
 # Load rbenv
-eval "$(rbenv init -)"
+eval "$(rbenv init - bash)"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
