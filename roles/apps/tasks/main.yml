@@ -5,6 +5,7 @@
     - homebrew/cask
     - homebrew/cask-fonts
     - homebrew/cask-versions
+    - teamookla/speedtest
 
 - name: install brews
   homebrew: name={{ item }} state=present
@@ -22,9 +23,10 @@
     - rustup
     - wget
     - mysql-client@5.7
+    - teamookla/speedtest/speedtest
 
 - name: install Java
-  homebrew_cask: name=temurin8 state=present
+  homebrew_cask: name=temurin@8 state=present
 
 - name: install Memcached
   homebrew: name=memcached state=present
