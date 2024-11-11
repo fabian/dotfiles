@@ -4,7 +4,6 @@
 
   roles:
     - apps
-    - atom
     - dotfiles
     - ssh
     - macos

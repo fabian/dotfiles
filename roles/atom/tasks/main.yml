@@ -1,8 +1,0 @@
----
-- name: create atom directory
-  file: path=~/.atom state=directory recurse=yes
-
-- name: copy atom config
-  template: src=config.cson.j2 dest=~/.atom/config.cson
-  tags:
-     - configuration
