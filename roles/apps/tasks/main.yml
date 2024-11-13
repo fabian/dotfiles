@@ -42,15 +42,6 @@
   ignore_errors: yes
   with_items: '{{ cask_apps }}'
 
-- name: install pip packages
-  pip: name={{ item }} state=present
-  with_items:
-    - ansible
-    - boto3
-    - virtualenv
-  environment:
-    PATH: "/usr/local/opt/mariadb@10.3/bin:{{ ansible_env.PATH }}"
-
 - name: install npm packages
   npm: name={{ item }} global=yes state=present
   with_items:
