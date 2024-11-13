@@ -46,9 +46,6 @@
   pip: name={{ item }} state=present
   with_items:
     - ansible
-    - mysqlclient
-    - PyMySQL
-    - python-memcached
     - boto3
     - virtualenv
   environment:
