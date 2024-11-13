@@ -85,12 +85,12 @@ cask_apps:
   - zoom
 app_store_apps:
   - 1024350410 # SnapMotion
-  - 1147396723 # WhatsApp Desktop
   - 1289583905 # Pixelmator Pro
   - 1381004916 # Discovery
   - 1451685025 # WireGuard
   - 1518036000 # Sequel Ace
   - 290986013 # Deliveries
+  - 310633997 # WhatsApp Desktop
   - 409183694 # Keynote
   - 409201541 # Pages
   - 409203825 # Numbers
