@@ -1,28 +1,12 @@
 ---
 - name: install taps
   homebrew_tap: tap={{ item }} state=present
-  with_items:
-    - homebrew/cask-fonts
-    - homebrew/cask-versions
-    - teamookla/speedtest
+  with_items: '{{ homebrew_taps }}' 
 
 - name: install brews
   homebrew: name={{ item }} state=present
   ignore_errors: yes
-  with_items:
-    - composer
-    - git
-    - python
-    - mas
-    - maven
-    - node
-    - svn
-    - rbenv
-    - ruby
-    - rustup
-    - wget
-    - mysql-client@5.7
-    - teamookla/speedtest/speedtest
+  with_items: '{{ homebrew_packages }}'
 
 - name: install Java
   homebrew_cask: name=temurin@8 state=present

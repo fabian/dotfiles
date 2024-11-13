@@ -1,4 +1,22 @@
 ---
+homebrew_taps:
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - teamookla/speedtest
+homebrew_packages:
+    - composer
+    - git
+    - python
+    - mas
+    - maven
+    - node
+    - svn
+    - rbenv
+    - ruby
+    - rustup
+    - wget
+    - mysql-client@5.7
+    - teamookla/speedtest/speedtest
 cask_apps:
   - 1password
   - 1password-cli
