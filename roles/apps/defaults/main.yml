@@ -82,7 +82,7 @@ cask_apps:
   - visual-studio-code
   - vlc
   - wrike
-  - zoomus
+  - zoom
 app_store_apps:
   - 1024350410 # SnapMotion
   - 1147396723 # WhatsApp Desktop
