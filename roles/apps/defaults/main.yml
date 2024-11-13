@@ -1,0 +1,94 @@
+---
+cask_apps:
+  - 1password
+  - 1password-cli
+  - adobe-acrobat-pro
+  - affinity-designer
+  - affinity-photo
+  - affinity-publisher
+  - aldente
+  - alfred
+  - android-studio
+  - appzapper
+  - blockblock
+  - charles
+  - cinebench
+  - coconutbattery
+  - cyberduck
+  - daisydisk
+  - dash
+  - docker
+  - dropbox
+  - firefox
+  - font-henny-penny
+  - font-league-gothic
+  - font-monaspace
+  - font-museo
+  - font-raleway
+  - font-roboto
+  - font-roboto-slab
+  - fontforge
+  - geekbench
+  - google-chrome
+  - google-drive
+  - gpg-suite-no-mail
+  - handbrake
+  - hazel
+  - hex-fiend
+  - jetbrains-toolbox
+  - jordanbaird-ice
+  - kaleidoscope@3
+  - lightkey
+  - little-snitch
+  - netnewswire
+  - nordlayer
+  - obs
+  - obs-websocket
+  - paparazzi
+  - poedit
+  - prince
+  - qlab
+  - rapidapi
+  - sf-symbols
+  - shottr
+  - signal
+  - sketch
+  - slidepilot
+  - sloth
+  - steam
+  - suspicious-package
+  - teamviewer
+  - tower
+  - transmit
+  - viscosity
+  - visual-studio-code
+  - vlc
+  - wrike
+  - zoomus
+app_store_apps:
+  - 1024350410 # SnapMotion
+  - 1147396723 # WhatsApp Desktop
+  - 1289583905 # Pixelmator Pro
+  - 1381004916 # Discovery
+  - 1451685025 # WireGuard
+  - 1518036000 # Sequel Ace
+  - 290986013 # Deliveries
+  - 409183694 # Keynote
+  - 409201541 # Pages
+  - 409203825 # Numbers
+  - 409907375 # Apple Remote Desktop
+  - 413965349 # Soulver
+  - 424389933 # Final Cut Pro
+  - 425424353 # The Unarchiver
+  - 434290957 # Motion
+  - 470158793 # Keka
+  - 497799835 # Xcode
+  - 546392952 # Prizmo
+  - 6444602274 # Ivory
+  - 6446048195 # QReate
+  - 775737590 # iA Writer
+  - 803453959 # Slack
+  - 889428659 # xScope
+  - 899247664 # TestFlight
+  - 904280696 # Things 3
+  - 955848755 # Theine

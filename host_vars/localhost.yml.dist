@@ -10,12 +10,3 @@ virtualhosts:
   - servername: foobar.dev
     serveralias: foobar.lo
     documentroot: /Users/peter/Workspace/foobar
-cask_apps:
-  - atom
-  - docker
-  - google-chrome
-app_store_apps:
-  - 497799835 # Xcode
-  - 409183694 # Keynote
-  - 409201541 # Pages
-  - 409203825 # Numbers
