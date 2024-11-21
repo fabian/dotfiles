@@ -9,7 +9,7 @@
   with_items: '{{ homebrew_packages }}'
 
 - name: install Java
-  homebrew_cask: name=temurin@8 state=present
+  homebrew_cask: name=corretto@8 state=present
 
 - name: install Memcached
   homebrew: name=memcached state=present
