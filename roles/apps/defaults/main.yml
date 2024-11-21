@@ -1,7 +1,5 @@
 ---
 homebrew_taps:
-  - homebrew/cask-fonts
-  - homebrew/cask-versions
   - teamookla/speedtest
 homebrew_packages:
     - composer
