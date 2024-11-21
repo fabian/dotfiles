@@ -1,4 +1,9 @@
 ---
+- name: create SSH directory
+  file: path=~/.ssh state=directory
+  tags:
+     - configuration
+
 - name: configure SSH
   template: src=templates/config.j2 dest=~/.ssh/config
   tags:
