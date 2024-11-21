@@ -15,7 +15,6 @@ homebrew_packages:
     - ruby
     - rustup
     - wget
-    - mysql-client@5.7
     - teamookla/speedtest/speedtest
 cask_apps:
   - 1password
