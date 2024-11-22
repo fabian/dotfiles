@@ -51,6 +51,7 @@ cask_apps:
   - handbrake
   - hazel
   - hex-fiend
+  - istat-menus
   - jetbrains-toolbox
   - jordanbaird-ice
   - kaleidoscope@3
