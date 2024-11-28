@@ -1,3 +1,3 @@
 ---
 - name: install Tomcat
-  homebrew: name=tomcat state=present
+  homebrew: name=tomcat@8 state=present
