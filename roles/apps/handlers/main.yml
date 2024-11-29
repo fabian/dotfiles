@@ -3,7 +3,7 @@
   command: brew services restart memcached
 
 - name: restart mariadb
-  command: brew services restart mariadb@10.3
+  command: brew services restart mariadb@10.11
 
 - name: restart redis
   command: brew services restart redis
