@@ -4,6 +4,7 @@
   register: terminal_theme
   check_mode: no
   changed_when: false
+  ignore_errors: true
 
 - name: download Terminal profile
   get_url: url=https://raw.githubusercontent.com/pstadler/optometrist/master/Optometrist.terminal dest=./Optometrist.terminal
