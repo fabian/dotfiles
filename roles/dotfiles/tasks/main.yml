@@ -10,5 +10,7 @@
     - .gitignore
     - .inputrc
     - .screenrc
+    - .zprofile
+    - .zshrc
   tags:
      - configuration
