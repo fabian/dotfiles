@@ -1,3 +1,0 @@
----
-- name: install Tomcat
-  homebrew: name=tomcat@8 state=present
