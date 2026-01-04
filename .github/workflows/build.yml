@@ -37,3 +37,7 @@ jobs:
 
     - name: Run Ansible Playbook
       run: ansible-playbook site.yml --diff
+
+    - name: Zsh Test
+      shell: zsh {0}
+      run: echo "Test"
