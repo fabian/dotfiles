@@ -83,6 +83,7 @@ cask_apps:
   - vlc
   - wrike
   - zoom
+  - temurin@21
 app_store_apps:
   - 1024350410 # SnapMotion
   - 1289583905 # Pixelmator Pro

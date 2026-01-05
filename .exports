@@ -10,7 +10,7 @@ export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/mysql-client@5.7/bin:$PATH"
 
-export JAVA_HOME="$(/usr/libexec/java_home --version 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home --version 21)"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
