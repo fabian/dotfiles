@@ -1,5 +1,7 @@
 # {{ ansible_managed }}
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export JAVA_HOME="$(/usr/libexec/java_home --version 21)"
+# Load the shell dotfiles shared across shells.
+for file in ~/.{path,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
