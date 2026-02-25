@@ -8,14 +8,13 @@ homebrew_packages:
     - python
     - mas
     - maven
-    - nvm
+    - node
     - svn
     - rbenv
     - ruby
     - rustup
     - wget
     - teamookla/speedtest/speedtest
-    - zsh-async
 cask_apps:
   - 1password
   - 1password-cli
