@@ -6,23 +6,20 @@ Host *
 {% for host in ssh_hosts %}
 
 Host {{ host.nickname | default(host.hostname) }}
-    Hostname {{ host.hostname }}
+    HostName {{ host.hostname }}
     Port {{ host.port | default(22) }}
     User {{ host.user | default(lookup('env', 'USER')) }}
-    ForwardAgent {% if host.forward_agent | default(False) %}yes{% else %}no{% endif %}
-
-{% if host.forward | default([]) %}
-    {% for forward in host.forward %}
+    ForwardAgent {{ 'yes' if host.forward_agent | default(False) else 'no' }}
+{% for forward in host.forward | default([]) %}
     LocalForward {{ forward.local_host | default('127.0.0.1') }}:{{ forward.local_port }} {{ forward.remote_host | default('127.0.0.1') }}:{{ forward.remote_port }}
-    {% endfor %}
-{% endif %}
+{% endfor %}
 
 {% if host.key is defined %}
     IdentityFile {{ host.key }}
 {% endif %}
 
 {% if host.strict_host_key_checking is defined %}
-    StrictHostKeyChecking {{ host.strict_host_key_checking }}
+    StrictHostKeyChecking {{ 'yes' if host.strict_host_key_checking else 'no' }}
 {% endif %}
 
 {% if host.user_known_hosts_file is defined %}
