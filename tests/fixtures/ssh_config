@@ -1,0 +1,30 @@
+# Ansible managed
+
+Host *
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+
+Host foobar
+    HostName foobar.example.org
+    Port 22
+    User max
+    ForwardAgent yes
+    LocalForward 127.0.0.1:15432 127.0.0.1:5432
+    LocalForward 127.0.0.1:12345 db.foobar.example.org:12345
+
+    IdentityFile /Users/example/.ssh/id_ed25519
+
+    StrictHostKeyChecking no
+
+    UserKnownHostsFile /Users/example/.ssh/known_hosts_app
+
+
+Host bastion
+    HostName bastion.example.com
+    Port 22
+    User ubuntu
+    ForwardAgent no
+
+
+
+

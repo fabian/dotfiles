@@ -32,8 +32,14 @@ jobs:
     - name: Lint Ansible Playbook
       run: ansible-playbook site.yml --syntax-check
 
+    - name: Copy test config
+      run: cp host_vars/localhost.yml.dist host_vars/localhost.yml
+
     - name: Run Ansible Playbook
       run: ansible-playbook site.yml --diff
+
+    - name: Check SSH config template fixture
+      run: diff -u tests/fixtures/ssh_config ~/.ssh/config
 
     - name: Zsh Test
       shell: zsh {0}

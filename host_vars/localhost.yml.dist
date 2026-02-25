@@ -12,6 +12,12 @@ ssh_hosts:
       - local_port: 12345
         remote_host: db.foobar.example.org
         remote_port: 12345
+    key: /Users/example/.ssh/id_ed25519
+    strict_host_key_checking: false
+    user_known_hosts_file: /Users/example/.ssh/known_hosts_app
+  - nickname: bastion
+    hostname: bastion.example.com
+    user: ubuntu
 virtualhosts:
   - servername: foobar.dev
     serveralias: foobar.lo
