@@ -12,13 +12,21 @@ Host {{ host.nickname | default(host.hostname) }}
     ForwardAgent {% if host.forward_agent | default(False) %}yes{% else %}no{% endif %}
 
 {% if host.forward | default([]) %}
-    {% for forward in host.forward -%}
-        LocalForward {{ forward.local_port }} 127.0.0.1:{{ forward.remote_port }}
+    {% for forward in host.forward %}
+    LocalForward {{ forward.local_host | default('127.0.0.1') }}:{{ forward.local_port }} {{ forward.remote_host | default('127.0.0.1') }}:{{ forward.remote_port }}
     {% endfor %}
 {% endif %}
 
 {% if host.key is defined %}
     IdentityFile {{ host.key }}
+{% endif %}
+
+{% if host.strict_host_key_checking is defined %}
+    StrictHostKeyChecking {{ host.strict_host_key_checking }}
+{% endif %}
+
+{% if host.user_known_hosts_file is defined %}
+    UserKnownHostsFile {{ host.user_known_hosts_file }}
 {% endif %}
 
 {% endfor %}

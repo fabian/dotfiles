@@ -6,6 +6,12 @@ ssh_hosts:
     hostname: foobar.example.org
     user: max
     forward_agent: yes
+    forward:
+      - local_port: 15432
+        remote_port: 5432
+      - local_port: 12345
+        remote_host: db.foobar.example.org
+        remote_port: 12345
 virtualhosts:
   - servername: foobar.dev
     serveralias: foobar.lo
