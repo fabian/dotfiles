@@ -84,6 +84,7 @@ cask_apps:
   - wrike
   - zoom
   - temurin@21
+  - gcloud-cli
 app_store_apps:
   - 1024350410 # SnapMotion
   - 1289583905 # Pixelmator Pro
