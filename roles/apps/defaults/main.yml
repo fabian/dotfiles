@@ -2,20 +2,16 @@
 homebrew_taps:
   - teamookla/speedtest
 homebrew_packages:
-    - composer
-    - git
-    - htop
-    - python
-    - mas
-    - maven
-    - node
-    - svn
-    - rbenv
-    - ruby
-    - rustup
-    - wget
-    - teamookla/speedtest/speedtest
-    - pnpm
+  - composer
+  - git
+  - htop
+  - python
+  - mas
+  - maven
+  - node
+  - wget
+  - teamookla/speedtest/speedtest
+  - pnpm
 cask_apps:
   - 1password
   - 1password-cli
