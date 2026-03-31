@@ -67,6 +67,7 @@ cask_apps:
   - thaw
   - gh
   - microsoft-office
+  - microsoft-teams
   - pearcleaner
 app_store_apps:
   - 1024350410 # SnapMotion
