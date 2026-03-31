@@ -66,6 +66,8 @@ cask_apps:
   - gcloud-cli
   - thaw
   - gh
+  - microsoft-office
+  - pearcleaner
 app_store_apps:
   - 1024350410 # SnapMotion
   - 1289583905 # Pixelmator Pro
