@@ -8,21 +8,6 @@
   ignore_errors: yes
   with_items: '{{ homebrew_packages }}'
 
-- name: install Java
-  homebrew_cask: name=corretto@8 state=present
-
-- name: install Memcached
-  homebrew: name=memcached state=present
-  notify: restart memcached
-
-- name: install MariaDB
-  homebrew: name=mariadb@10.11 state=present
-  notify: restart mariadb
-
-- name: install Redis
-  homebrew: name=redis state=present
-  notify: restart redis
-
 - name: get installed apps from app store
   command: mas list
   when: not lookup("env", "CI")
