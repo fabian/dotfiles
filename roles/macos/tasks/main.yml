@@ -1,28 +1,4 @@
 ---
-- name: get current Terminal profile
-  shell: defaults read com.apple.Terminal 'Default Window Settings'
-  register: terminal_theme
-  check_mode: no
-  changed_when: false
-  ignore_errors: true
-
-- name: download Terminal profile
-  get_url: url=https://raw.githubusercontent.com/pstadler/optometrist/master/Optometrist.terminal dest=./Optometrist.terminal
-  when: terminal_theme.stdout != "Optometrist"
-
-- name: ensure custom Terminal profile is added
-  shell: open Optometrist.terminal
-  changed_when: false
-  when: terminal_theme.stdout != "Optometrist"
-
-- name: ensure custom Terminal profile is set as default
-  shell: defaults write com.apple.Terminal '{{ item }}' -string 'Optometrist'
-  with_items:
-    - Default Window Settings
-    - Startup Window Settings
-  changed_when: false
-  when: terminal_theme.stdout != "Optometrist"
-
 - name: run .macos commands
   script: .macos
   changed_when: false
