@@ -13,6 +13,7 @@ homebrew_packages:
   - teamookla/speedtest/speedtest
   - pnpm
   - ripgrep
+  - mtr
 cask_apps:
   - 1password
   - 1password-cli
