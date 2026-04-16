@@ -2,6 +2,7 @@
 homebrew_taps:
   - teamookla/speedtest
 homebrew_packages:
+  - ansible-lint
   - composer
   - git
   - htop
