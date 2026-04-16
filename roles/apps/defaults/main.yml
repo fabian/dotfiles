@@ -3,6 +3,7 @@ homebrew_taps:
   - teamookla/speedtest
 homebrew_packages:
   - ansible-lint
+  - cloudflared
   - composer
   - git
   - htop

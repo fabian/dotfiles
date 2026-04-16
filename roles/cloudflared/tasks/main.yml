@@ -1,0 +1,26 @@
+---
+- name: create cloudflared directory
+  file: path=~/.cloudflared state=directory mode=0700
+  when: cloudflared_config is defined
+  tags:
+     - configuration
+
+- name: configure cloudflared
+  template: src=templates/config.yml.j2 dest=~/.cloudflared/config.yml mode=0600
+  when: cloudflared_config is defined
+  register: cloudflared_config_result
+  tags:
+     - configuration
+
+- name: configure cloudflared launch agent
+  template: src=templates/com.cloudflare.cloudflared.plist.j2 dest=~/Library/LaunchAgents/com.cloudflare.cloudflared.plist mode=0644
+  when: cloudflared_config is defined
+  register: cloudflared_launch_agent_result
+  tags:
+     - configuration
+
+- name: load cloudflared launch agent
+  command: launchctl load -w ~/Library/LaunchAgents/com.cloudflare.cloudflared.plist
+  when: cloudflared_config is defined and (cloudflared_config_result.changed or cloudflared_launch_agent_result.changed)
+  tags:
+     - configuration

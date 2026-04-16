@@ -4,6 +4,7 @@
 
   roles:
     - apps
+    - cloudflared
     - dotfiles
     - ssh
     - macos
