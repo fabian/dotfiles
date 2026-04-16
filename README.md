@@ -12,5 +12,5 @@
 
 ## Tips
 
-To quickly apply configuration changes run `ansible-playbook site.yml --tags=configuration --diff --ask-become-pass`.
+To quickly apply configuration changes run `ansible-playbook site.yml --tags=configuration --diff`.
 
