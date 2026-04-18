@@ -7,10 +7,10 @@ homebrew_packages:
   - composer
   - git
   - htop
-  - mariadb-connector-c
   - mas
   - maven
   - mtr
+  - mysql-client
   - node
   - pnpm
   - python
