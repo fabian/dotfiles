@@ -15,6 +15,7 @@ homebrew_packages:
   - pnpm
   - python
   - python@3.11
+  - pkgconf
   - ripgrep
   - teamookla/speedtest/speedtest
   - wget

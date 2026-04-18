@@ -13,6 +13,9 @@ export JAVA_HOME="$(/usr/libexec/java_home --version 21)"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HOMEBREW_NO_ENV_HINTS=1
 
+export MYSQLCLIENT_CFLAGS="-I/opt/homebrew/opt/mysql-client/include/mysql"
+export MYSQLCLIENT_LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib -lmysqlclient"
+
 # Make nano the default editor.
 export EDITOR='nano';
 

@@ -5,8 +5,6 @@ if [ -r "$HOME/.zprofile" ]; then
     source "$HOME/.zprofile"
 fi
 
-export PATH="/opt/homebrew/opt/mariadb@10.11/bin:$PATH"
-
 # Docker CLI completions
 FPATH="$HOME/.docker/completions:$FPATH"
 
