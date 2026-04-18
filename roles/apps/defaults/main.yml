@@ -7,15 +7,17 @@ homebrew_packages:
   - composer
   - git
   - htop
-  - python
+  - mariadb-connector-c
   - mas
   - maven
-  - node
-  - wget
-  - teamookla/speedtest/speedtest
-  - pnpm
-  - ripgrep
   - mtr
+  - node
+  - pnpm
+  - python
+  - python@3.11
+  - ripgrep
+  - teamookla/speedtest/speedtest
+  - wget
 cask_apps:
   - 1password
   - 1password-cli
