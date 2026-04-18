@@ -5,6 +5,7 @@ homebrew_packages:
   - ansible-lint
   - cloudflared
   - composer
+  - black
   - git
   - htop
   - mas
